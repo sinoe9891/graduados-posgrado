@@ -86,155 +86,35 @@
   						<select name="paisInput" id="paisInput">
   							<option value="">Selecciona un país</option>
   							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Alemania') {
-												echo "selected";
-											}
-										} ?> value="Alemania">Alemania</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Argentina') {
-												echo "selected";
-											}
-										} ?> value="Argentina">Argentina</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Austria') {
-												echo "selected";
-											}
-										} ?> value="Austria">Austria</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Bélgica') {
-												echo "selected";
-											}
-										} ?> value="Bélgica">Bélgica</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Belice') {
-												echo "selected";
-											}
-										} ?> value="Belice">Belice</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Brasil') {
-												echo "selected";
-											}
-										} ?> value="Brasil">Brasil</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
 											if ($_GET['paisInput'] == 'Bolivia') {
 												echo "selected";
 											}
 										} ?> value="Bolivia">Bolivia</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Canadá') {
-												echo "selected";
-											}
-										} ?> value="Canadá">Canadá</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Chile') {
-												echo "selected";
-											}
-										} ?> value="Chile">Chile</option>
   							<option <?php if (isset($_GET['paisInput'])) {
 											if ($_GET['paisInput'] == 'Colombia') {
 												echo "selected";
 											}
 										} ?> value="Colombia">Colombia</option>
   							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Costa Rica') {
-												echo "selected";
-											}
-										} ?> value="Costa Rica">Costa Rica</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Cuba') {
-												echo "selected";
-											}
-										} ?> value="Cuba">Cuba</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
 											if ($_GET['paisInput'] == 'Ecuador') {
 												echo "selected";
 											}
 										} ?> value="Ecuador">Ecuador</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'El Salvador') {
-												echo "selected";
-											}
-										} ?> value="El Salvador">El Salvador</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'España') {
-												echo "selected";
-											}
-										} ?> value="España">España</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Estados Unidos') {
-												echo "selected";
-											}
-										} ?> value="Estados Unidos">Estados Unidos</option>
   							<option <?php if (isset($_GET['paisInput'])) {
 											if ($_GET['paisInput'] == 'Guatemala') {
 												echo "selected";
 											}
 										} ?> value="Guatemala">Guatemala</option>
   							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Haití') {
-												echo "selected";
-											}
-										} ?> value="Haití">Haití</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
 											if ($_GET['paisInput'] == 'Honduras') {
 												echo "selected";
 											}
 										} ?> value="Honduras">Honduras</option>
   							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Israel') {
-												echo "selected";
-											}
-										} ?> value="Israel">Israel</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Italia') {
-												echo "selected";
-											}
-										} ?> value="Italia">Italia</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Jamaica') {
-												echo "selected";
-											}
-										} ?> value="Jamaica">Jamaica</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'México') {
-												echo "selected";
-											}
-										} ?> value="México">México</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
 											if ($_GET['paisInput'] == 'Nicaragua') {
 												echo "selected";
 											}
 										} ?> value="Nicaragua">Nicaragua</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Panamá') {
-												echo "selected";
-											}
-										} ?> value="Panamá">Panamá</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Paraguay') {
-												echo "selected";
-											}
-										} ?> value="Paraguay">Paraguay</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Perú') {
-												echo "selected";
-											}
-										} ?> value="Perú">Perú</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'República Dominicana') {
-												echo "selected";
-											}
-										} ?> value="República Dominicana">República Dominicana</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Uruguay') {
-												echo "selected";
-											}
-										} ?> value="Uruguay">Uruguay</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Venezuela') {
-												echo "selected";
-											}
-										} ?> value="Venezuela">Venezuela</option>
   						</select>
   					</div>
   				</div>
@@ -250,7 +130,7 @@
   			</div>
   		</form>
 
-
+		<!-- Resultado de Búsqueda -->
   		<?php
 			if (!empty($_GET)) {
 				require_once('includes/busqueda.php');

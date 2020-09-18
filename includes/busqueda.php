@@ -309,11 +309,7 @@ if(empty($_GET))
                             </div>';
            }
 
-           // CONDICIÓN AGRÓNOMO
-          //  if ($f['programa']=='0007' AND $f['deceased']=='NO') {
-          //      $Titulo='AGRÓNOMO';
-          //      $card_action='<a class="waves-effect waves-light btn-large ripple-effect" target="_blank" style="background-color:#008341" href="https://goo.gl/TVWJq9"><i class="material-icons left">library_books</i>ACTUALIZA TUS DATOS</a>';
-          //  }
+
            if ($f['programa']=='0007' AND $f['deceased']=='NO') {
                $Titulo='AGRÓNOMO';
                $card_action='<div class="box-education">
@@ -329,7 +325,7 @@ if(empty($_GET))
            }
 
            // CONDICIÓN 4X4
-           if ($f['programa']=='0777' AND $f['deceased']=='NO') {
+           if ($f['programa']=='master' AND $f['deceased']=='NO') {
                $Titulo='INGENIERO AGRÓNOMO';
                $card_action='
                               <div class="box-education">
@@ -355,7 +351,7 @@ if(empty($_GET))
                               </div>';               
            }
            
-           if ($f['programa']=='0777' AND $f['deceased']=='SI') {
+           if ($f['programa']=='master' AND $f['deceased']=='SI') {
                $Titulo='INGENIERO AGRÓNOMO';
                $card_action='<div class="box-education">
                               <div class="box-icono1">
@@ -377,28 +373,10 @@ if(empty($_GET))
                               </div>
                             </div>';
            }
-           if ($f['programa']=='0777') {
-             if ($f['orientacion']=='GESTION DE AGRONEGOCIOS') {
-                 $Titulo='INGENIERO EN GESTION DE AGRONEGOCIOS';
-             }
-             if ($f['orientacion']=='AGROINDUSTRIA') {
-                 $Titulo='INGENIERO EN AGROINDUSTRIA';
-             }
-           if ($f['orientacion']=='INGENIERIA AGRONÓMICA') {
-               $Titulo='INGENIERO AGRÓNOMO';
-           }
-           if ($f['orientacion']=='AGROINDUSTRIA ALIMENTARIA') {
-               $Titulo='INGENIERO EN AGROINDUSTRIA ALIMENTARIA';
-           }
-           if ($f['orientacion']=='ADMINISTRACION DE AGRONEGOCIOS') {
-               $Titulo='INGENIERO EN ADMINISTRACION DE AGRONEGOCIOS';
-           }
-           if ($f['orientacion']=='DESARROLLO SOCIOECONOMICO Y AMBIENTE') {
-               $Titulo='INGENIERO EN DESARROLLO SOCIOECONOMICO Y AMBIENTE';
-           }
-           if ($f['orientacion']=='AMBIENTE Y DESARROLLO') {
-               $Titulo='INGENIERO EN AMBIENTE Y DESARROLLO';
-           }
+           if ($f['programa']=='master') {
+             if ($f['orientacion']=='MATS') {
+                 $Titulo='Maestría de Agricultura Tropical Sostenible';
+             } 
            }
            if(isset($_SESSION['perfiles_user']) ){
            $boton='<a href="editar-perfil.php?id='.$f['ID'].'&pais_reside='.$f['pais_reside'].'&ciudad='.$f['ciudad'].'&url_tesis='.$f['url_tesis'].'&nickname='.$f['nickname'].'&deceased='.$f['deceased'].'&date_deceased='.$f['date_deceased'].'&movil='.$f['movil'].'&telefono='.$f['telefono'].'&email='.$f['email'].'&email_2='.$f['email_2'].'&email_3='.$f['email_3'].'&direccion='.$f['direccion'].'&financiado_por='.$f['financiado_por'].'&otras_entidades='.$f['otras_entidades'].'&asesor_tesis='.$f['asesor_tesis'].'&clase='.$f['clase'].'&codigo='.$f['codigo'].'&nombres='.$f['nombres'].'&apellidos='.$f['apellidos'].'&nacionalidad='.$f['nacionalidad'].'&genero='.$f['genero'].'&programa='.$f['programa'].'&orientacion='.$f['orientacion'].'&diaGraduacion='.$f['dia_graduacion'].'&mesGraduacion='.$f['mes_graduacion'].'&estatus='.$f['estatus'].'&lugarPasantia='.$f['lugar_pasantia'].'&direccion_pasantia='.$f['direccion_pasantia'].'&rubro_empresa='.$f['rubro_empresa'].'&areaInvestigacion='.$f['area_investigacion'].'&titulo_tesis='.$f['titulo_tesis'].'&pa='.$f['pa'].'&fechaNacimiento='.$f['fecha_nacimiento'].'&anioIA='.$f['anioIA'].'&codigoIA='.$f['codigoIA'].'&exp_pasantia='.$f['exp_pasantia'].'&area_interes='.$f['area_interes'].'" class="btn-floating btn-move-up waves-effect waves-light ripple-effect red darken-2 btn-large right">
