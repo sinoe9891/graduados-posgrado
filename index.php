@@ -140,7 +140,7 @@
 								<div class="">
 									<div class="input">
 										<label for="clase">Clase</label>
-										<input type="number" class="form-control" id="claseInput" placeholder="" value="">
+										<input type="number" class="form-control" id="claseInput" placeholder="" value="" min="2020" max="2020">
 									</div>
 
 									<div class="input">
@@ -246,5 +246,4 @@
 
 
 <!--
-
-  `ID`, `codigo`, `nombres`, `apellidos`, `nacionalidad`, `genero`, `programa`  `orientacion`  `dia_graduacion`, `mes_graduacion`, `estatus`, `lugar_pasantia`, `exp_pasantia`, `area_investigacion`, `asesor_tesis`, `url_pasantia`, `titulo`, `pa`, `fecha_nacimiento`, `financiado_por`, `direccion`, `email`, `telefono`, `movil`, -->
+fecha_nacimiento`, `financiado_por`, `direccion`, `email`, `telefono`, `movil`, -->
