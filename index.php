@@ -1,300 +1,250 @@
-  <!DOCTYPE html>
-  <html>
-  <?php require_once('includes/session.php'); ?>
-  <?php require_once('includes/header.php'); ?>
+<!DOCTYPE html>
+<html>
+<?php require_once('includes/session.php'); ?>
 
-  <body>
-  	<?php require_once('includes/nav.php'); ?>
-  	<main class="container">
+<!-- Bootstrap CSS -->
 
-  		<div class="row">
-  			<div align="center" class="col s12 m12 l12">
-  				<h3>LISTADO DE GRADUADOS</h3>
-  				<h6><strong><?php if (isset($_SESSION['perfiles_user'])) {
+<link rel="stylesheet" type="text/css" href="css/style-profile.css">
+    <link rel="stylesheet" type="text/css" href="includes/styles/back-to-top/back-to-top.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<style>
+	.container1 {
+		width: 100% !important;
+		display: flex;
+		justify-content: center;
+	}
+
+	.container_main {
+		width: 720px;
+		margin: 50px 0;
+		display: flex;
+		height: 392px;
+		box-shadow: 3px 3px #0000005c;
+	}
+
+	.titulo {
+		text-align: right;
+		padding: 20px 20px;
+	}
+
+	.titulo h3 {
+		color: #931919;
+		line-height: 1;
+		font-size: 28px;
+	}
+
+	.titulo h1 {
+		color: #931919;
+		line-height: 1;
+		font-size: 28px;
+	}
+
+	.column_one {
+		width: 350px;
+	}
+
+	.column_one img {
+		width: 100%;
+		object-fit: cover;
+		height: 392px;
+	}
+
+	.column_second {
+		width: 350px;
+	}
+
+
+	form {
+		display: flex;
+		justify-content: center;
+	}
+
+	label {
+		padding: 0 10px;
+		text-align: right;
+		display: inline-block;
+		width: 80px;
+	}
+
+	#claseInput,
+	#codigoInput,
+	#nombresInput,
+	#apellidosInput,
+	#paisInput {
+		border-radius: 50px !important;
+		width: 150px;
+		height: 25px;
+		background: #cdcdcd;
+	}
+
+	#paisInput {
+		border: none;
+	}
+
+
+	#buscar {
+		background: #008341;
+		color: white;
+		width: 100px;
+		margin-top: 20px;
+	}
+
+	input {
+		width: 147px;
+		border-radius: 50px;
+	}
+
+	select {
+		text-align-last: right;
+		text-align: right;
+		-ms-text-align-last: right;
+		-moz-text-align-last: right;
+	}
+
+	.input {
+		display: flex;
+		margin-bottom: 5px;
+		width: 230px;
+		display: flex;
+		justify-content: center;
+
+	}
+</style>
+
+<body>
+	<main class="container">
+		<div>
+			<div class="row">
+				<div align="center" class="col s12 m12 l12">
+					<h3>LISTADO DE GRADUADOS</h3>
+					<h6><strong><?php if (isset($_SESSION['perfiles_user'])) {
 									echo "Busqueda avanzada: Usuario: " . $_SESSION['perfiles_user'];
 								} ?></strong></h6>
-  				<h6 id="error">Selecciona el dato que necesitas.</h6>
-  				<h6>Si no encuentras tus datos completos, probablemente necesitas actualizarlos.</br> Puedes hacerlo <a href="https://goo.gl/TVWJq9">aquí</a></h6>
-  			</div>
-  		</div>
-  		<form name="form1" method="GET" id="cdr">
-  			<div class="row">
-  				<div class="col s12 m6 l2">
-  					<div class="row">
-  						<p>
-  							<input type="checkbox" class="filled-in" id="clase" />
-  							<label for="clase">Clase</label>
-  						</p>
-  					</div>
-  					<div class="input-field row">
-  						<input name="claseInput" hidden disabled required value="<?php if (isset($_GET['claseInput'])) {
-																						echo $_GET['claseInput'];
-																					} ?>" id="claseInput" type="number" class="validate">
-  						<label for="claseInput">Clase</label>
-  					</div>
-  				</div>
-  				<div class="col s12 m6 l2">
-  					<div class="row">
-  						<p>
-  							<input type="checkbox" class="filled-in" id="codigo" />
-  							<label for="codigo">Código</label>
-  						</p>
-  					</div>
-  					<div class="input-field row">
-  						<input name="codigoInput" hidden disabled required value="<?php if (isset($_GET['codigoInput'])) {
-																						echo $_GET['codigoInput'];
-																					} ?>" id="codigoInput" type="text" class="validate">
-  						<label for="codigoInput">Código</label>
-  					</div>
-  				</div>
-  				<div class="col s12 m6 l3">
-  					<div class="row">
-  						<p>
-  							<input type="checkbox" class="filled-in" id="nombres" />
-  							<label for="nombres">Nombres</label>
-  						</p>
-  					</div>
-  					<div class="input-field row">
-  						<input name="nombresInput" hidden disabled required value="<?php if (isset($_GET['nombresInput'])) {
-																							echo $_GET['nombresInput'];
-																						} ?>" id="nombresInput" type="text" class="validate">
-  						<label for="NombresInput">Nombres</label>
-  					</div>
-  				</div>
-  				<div class="col s12 m6 l3">
-  					<div class="row">
-  						<p>
-  							<input type="checkbox" class="filled-in" id="apellidos" />
-  							<label for="apellidos">Apellidos</label>
-  						</p>
-  					</div>
-  					<div class="input-field row">
-  						<input name="apellidosInput" hidden disabled required value="<?php if (isset($_GET['apellidosInput'])) {
-																							echo $_GET['apellidosInput'];
-																						} ?>" id="apellidosInput" type="text" class="validate">
-  						<label for="apellidosInput">Apellidos</label>
-  					</div>
-  				</div>
-  				<div class="col s12 m6 l2">
-  					<div class="row">
-  						<p>
-  							<input type="checkbox" class="filled-in" id="pais" />
-  							<label for="pais">País</label>
-  						</p>
-  					</div>
-  					<div class="input-field row">
-  						<select name="paisInput" id="paisInput">
-  							<option value="">Selecciona un país</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Bolivia') {
-												echo "selected";
-											}
-										} ?> value="Bolivia">Bolivia</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Colombia') {
-												echo "selected";
-											}
-										} ?> value="Colombia">Colombia</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Ecuador') {
-												echo "selected";
-											}
-										} ?> value="Ecuador">Ecuador</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Guatemala') {
-												echo "selected";
-											}
-										} ?> value="Guatemala">Guatemala</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Honduras') {
-												echo "selected";
-											}
-										} ?> value="Honduras">Honduras</option>
-  							<option <?php if (isset($_GET['paisInput'])) {
-											if ($_GET['paisInput'] == 'Nicaragua') {
-												echo "selected";
-											}
-										} ?> value="Nicaragua">Nicaragua</option>
-  						</select>
-  					</div>
-  				</div>
+					<h6 id="error">Selecciona el dato que necesitas.</h6>
+					<h6>Si no encuentras tus datos completos, probablemente necesitas actualizarlos.</br> Puedes hacerlo <a href="https://goo.gl/TVWJq9">aquí</a></h6>
+				</div>
+			</div>
+			<div class="container1">
+				<div class="container_main">
+					<div class="column_one">
+						<img src="https://www.zamorano.edu/wp-content/uploads/2019/02/0000_zamorano-estudiantes.jpg" alt="">
+					</div>
+					<div class="column_second">
+						<div class="titulo">
+							<h3>Lista de</h3>
+							<h1>Graduados</h1>
+						</div>
+						<div class="formulario">
+							<form action="">
+								<div class="">
+									<div class="input">
+										<label for="clase">Clase</label>
+										<input type="number" class="form-control" id="claseInput" placeholder="" value="">
+									</div>
 
-  				<div class="row">
-  					<div class="col s12 m6 l2">
-  						<button type="submit" hidden></button>
-  						<p>
-  							<a href="javascript: void(0);" class="wav-es-effect waves-light btn-large ripple-effect " id="boton">Buscar</a>
-  						</p>
-  					</div>
-  				</div>
-  			</div>
-  		</form>
+									<div class="input">
+										<label for="codigo">Código</label>
+										<input name="codigoInput" type="text" class="form-control" id="codigoInput" placeholder="" value="">
+									</div>
+
+									<div class="input">
+										<label for="nombres">Nombres</label>
+										<input type="text" name="nombresInput" class="form-control" id="nombresInput" placeholder="" value="">
+									</div>
+
+									<div class="input">
+										<label for="apellidos">Apellidos</label>
+										<input type="text" name="apellidosInput" class="form-control" id="apellidosInput" placeholder="" value="">
+									</div>
+
+									<div class="input">
+										<label for="pais">País</label>
+										<select name="paisInput" id="paisInput">
+											<option></option>
+											<option value="">Selecciona un país</option>
+											<option <?php if (isset($_GET['paisInput'])) {
+														if ($_GET['paisInput'] == 'Bolivia') {
+															echo "selected";
+														}
+													} ?> value="Bolivia">Bolivia</option>
+											<option <?php if (isset($_GET['paisInput'])) {
+														if ($_GET['paisInput'] == 'Colombia') {
+															echo "selected";
+														}
+													} ?> value="Colombia">Colombia</option>
+											<option <?php if (isset($_GET['paisInput'])) {
+														if ($_GET['paisInput'] == 'Ecuador') {
+															echo "selected";
+														}
+													} ?> value="Ecuador">Ecuador</option>
+											<option <?php if (isset($_GET['paisInput'])) {
+														if ($_GET['paisInput'] == 'Guatemala') {
+															echo "selected";
+														}
+													} ?> value="Guatemala">Guatemala</option>
+											<option <?php if (isset($_GET['paisInput'])) {
+														if ($_GET['paisInput'] == 'Honduras') {
+															echo "selected";
+														}
+													} ?> value="Honduras">Honduras</option>
+											<option <?php if (isset($_GET['paisInput'])) {
+														if ($_GET['paisInput'] == 'Nicaragua') {
+															echo "selected";
+														}
+													} ?> value="Nicaragua">Nicaragua</option>
+										</select>
+									</div>
+									<div class="input">
+										<!-- <input type="submit" class="form-control" id="buscar" placeholder="" value="Buscar"> -->
+										<button type="submit" class="form-control" id="buscar" placeholder="" value="Buscar">Buscar</button>
+									</div>
+
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 		<!-- Resultado de Búsqueda -->
-  		<?php
-			if (!empty($_GET)) {
-				require_once('includes/busqueda.php');
+		<?php
+		if (!empty($_GET)) {
+			require_once('includes/busqueda.php');
+		}
+		?>
+		</div>
+		</div>
+
+
+
+	</main>
+	<script type="text/javascript">
+		document.getElementById('boton').addEventListener('click', function() {
+			console.log(document.getElementById('codigo').checked + ' - ' + document.getElementById('nombres').checked + ' - ' + document.getElementById('apellidos').checked + ' - ' + document.getElementById('clase').checked + ' - ' + document.getElementById('pais').checked);
+
+
+			if (document.getElementById('codigo').checked == true || document.getElementById('nombres').checked == true || document.getElementById('apellidos').checked == true || document.getElementById('clase').checked == true || document.getElementById('pais').checked == true) {
+				// document.getElementById('cdr').submit();
+				$('#cdr').find('[type="submit"]').trigger('click');
+			} else {
+				document.getElementById('error').innerHTML = "<h6 id='error'>Selecciona una opción y completa los datos que necesitas.</h6>"
 			}
-			?>
-  		</div>
-  		</div>
 
+		});
+	</script>
+	<a href="#0" class="cd-top js-cd-top">Top</a>
+	<script src="includes/styles/back-to-top/back-to-top.js"></script>
+	<?php require_once('includes/footer.php'); ?>
+</body>
 
-
-  	</main>
-  	<script type="text/javascript">
-  		window.addEventListener("load", function() {
-  			var check = document.getElementById('codigo').checked;
-  			if (document.getElementById('codigoInput').value != "") {
-  				document.getElementById('codigo').checked = true;
-  				document.getElementById('codigoInput').disabled = false;
-  				document.getElementById('codigoInput').hidden = false;
-  			} else if (check) {
-  				document.getElementById('codigoInput').disabled = false;
-  				document.getElementById('codigoInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('codigoInput').disabled = true;
-  				document.getElementById('codigoInput').hidden = true;
-  			}
-
-  			var check = document.getElementById('nombres').checked;
-  			if (document.getElementById('nombresInput').value != "") {
-  				document.getElementById('nombres').checked = true;
-  				document.getElementById('nombresInput').disabled = false;
-  				document.getElementById('nombresInput').hidden = false;
-  			} else if (check) {
-  				document.getElementById('nombresInput').disabled = false;
-  				document.getElementById('nombresInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('nombresInput').disabled = true;
-  				document.getElementById('nombresInput').hidden = true;
-  			}
-
-  			var check = document.getElementById('apellidos').checked;
-  			if (document.getElementById('apellidosInput').value != "") {
-  				document.getElementById('apellidos').checked = true;
-  				document.getElementById('apellidosInput').disabled = false;
-  				document.getElementById('apellidosInput').hidden = false;
-  			} else if (check) {
-  				document.getElementById('apellidosInput').disabled = false;
-  				document.getElementById('apellidosInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('apellidosInput').disabled = true;
-  				document.getElementById('apellidosInput').hidden = true;
-  			}
-
-  			var check = document.getElementById('pais').checked;
-  			if (document.getElementById('paisInput').value != "") {
-  				document.getElementById('pais').checked = true;
-  				document.getElementById('paisInput').disabled = false;
-  				document.getElementById('paisInput').hidden = false;
-  			} else if (check) {
-  				document.getElementById('paisInput').disabled = false;
-  				document.getElementById('paisInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('paisInput').disabled = true;
-  				document.getElementById('paisInput').hidden = true;
-  			}
-
-  			var check = document.getElementById('clase').checked;
-  			if (document.getElementById('claseInput').value != "") {
-  				document.getElementById('clase').checked = true;
-  				document.getElementById('claseInput').disabled = false;
-  				document.getElementById('claseInput').hidden = false;
-  			} else if (check) {
-  				document.getElementById('claseInput').disabled = false;
-  				document.getElementById('claseInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('claseInput').disabled = true;
-  				document.getElementById('claseInput').hidden = true;
-  			}
-
-  		});
-
-
-
-  		document.getElementById('codigo').addEventListener("click", function() {
-  			var check = document.getElementById('codigo').checked;
-  			if (check) {
-  				document.getElementById('codigoInput').disabled = false;
-  				document.getElementById('codigoInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('codigoInput').disabled = true;
-  				document.getElementById('codigoInput').hidden = true;
-  			}
-
-  		});
-
-  		document.getElementById('nombres').addEventListener("click", function() {
-  			var check = document.getElementById('nombres').checked;
-  			if (check) {
-  				document.getElementById('nombresInput').disabled = false;
-  				document.getElementById('nombresInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('nombresInput').disabled = true;
-  				document.getElementById('nombresInput').hidden = true;
-  			}
-
-  		});
-
-  		document.getElementById('apellidos').addEventListener("click", function() {
-  			var check = document.getElementById('apellidos').checked;
-  			if (check) {
-  				document.getElementById('apellidosInput').disabled = false;
-  				document.getElementById('apellidosInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('apellidosInput').disabled = true;
-  				document.getElementById('apellidosInput').hidden = true;
-  			}
-
-  		});
-
-  		document.getElementById('clase').addEventListener("click", function() {
-  			var check = document.getElementById('clase').checked;
-  			if (check) {
-  				document.getElementById('claseInput').disabled = false;
-  				document.getElementById('claseInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('claseInput').disabled = true;
-  				document.getElementById('claseInput').hidden = true;
-  			}
-
-  		});
-  		document.getElementById('pais').addEventListener("click", function() {
-  			var check = document.getElementById('pais').checked;
-  			if (check) {
-  				document.getElementById('paisInput').disabled = false;
-  				document.getElementById('paisInput').hidden = false;
-  			} else if (!check) {
-  				document.getElementById('paisInput').disabled = true;
-  				document.getElementById('paisInput').hidden = true;
-  			}
-
-  		});
-
-  		document.getElementById('boton').addEventListener('click', function() {
-  			console.log(document.getElementById('codigo').checked + ' - ' + document.getElementById('nombres').checked + ' - ' + document.getElementById('apellidos').checked + ' - ' + document.getElementById('clase').checked + ' - ' + document.getElementById('pais').checked);
-
-
-  			if (document.getElementById('codigo').checked == true || document.getElementById('nombres').checked == true || document.getElementById('apellidos').checked == true || document.getElementById('clase').checked == true || document.getElementById('pais').checked == true) {
-  				// document.getElementById('cdr').submit();
-  				$('#cdr').find('[type="submit"]').trigger('click');
-  			} else {
-  				document.getElementById('error').innerHTML = "<h6 id='error'>Selecciona una opción y completa los datos que necesitas.</h6>"
-  			}
-
-  		});
-  	</script>
-  	<a href="#0" class="cd-top js-cd-top">Top</a>
-  	<script src="includes/styles/back-to-top/back-to-top.js"></script>
-  	<?php require_once('includes/footer.php'); ?>
-  </body>
-
-  </html>
+</html>
 
 
 
 
-  <!--
+<!--
 
   `ID`, `codigo`, `nombres`, `apellidos`, `nacionalidad`, `genero`, `programa`  `orientacion`  `dia_graduacion`, `mes_graduacion`, `estatus`, `lugar_pasantia`, `exp_pasantia`, `area_investigacion`, `asesor_tesis`, `url_pasantia`, `titulo`, `pa`, `fecha_nacimiento`, `financiado_por`, `direccion`, `email`, `telefono`, `movil`, -->

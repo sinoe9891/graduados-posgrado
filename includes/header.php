@@ -7,7 +7,7 @@
     <title>Perfiles de Graduados | Universidad Zamorano</title>
     <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/materialize/materialize.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/materialize/materialize.min.css"> -->
     <link rel="stylesheet" type="text/css" href="css/style-profile.css">
     <link rel="stylesheet" type="text/css" href="includes/styles/back-to-top/back-to-top.css">
     <style type="text/css">
