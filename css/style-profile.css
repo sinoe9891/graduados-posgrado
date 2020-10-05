@@ -8,7 +8,8 @@
 }
 
 .container {
-    width: 85%;
+	width: 85%;
+	margin-top: 20px;
 }
 
 nav {
@@ -227,4 +228,126 @@ input[type="text"].validate+label {}
 .imagen-icon1 {
     width: 50px;
     height: 50px;
+}
+
+.container1 {
+	width: 100% !important;
+	display: flex;
+	justify-content: center;
+}
+
+.container_main {
+	width: 720px;
+	margin: 50px 0;
+	display: flex;
+	height: 392px;
+	box-shadow: 3px 3px #0000005c;
+}
+
+.titulo {
+	text-align: right;
+	padding: 20px 20px;
+}
+
+.titulo h3 {
+	color: #931919;
+	line-height: 1;
+	font-size: 28px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.titulo h1 {
+	color: #931919;
+	line-height: 1;
+	font-size: 28px;
+}
+
+.column_one {
+	width: 350px;
+}
+
+.column_one img {
+	width: 100%;
+	object-fit: cover;
+	height: 392px;
+}
+
+.column_second {
+	width: 350px;
+}
+
+
+form {
+	display: flex;
+	justify-content: center;
+}
+
+label {
+	padding: 0 10px;
+	text-align: right;
+	display: inline-block;
+	width: 80px;
+}
+
+#claseInput,
+#codigoInput,
+#nombresInput,
+#apellidosInput,
+#paisInput {
+	border-radius: 50px !important;
+	width: 150px;
+	height: 25px;
+	background: #cdcdcd;
+}
+
+#paisInput {
+	border: none;
+}
+
+
+#buscar {
+	background: #008341;
+	color: white;
+	width: 100px;
+	margin-top: 20px;
+}
+
+input {
+	width: 147px;
+	border-radius: 50px;
+}
+
+select {
+	text-align-last: right;
+	text-align: right;
+	-ms-text-align-last: right;
+	-moz-text-align-last: right;
+}
+
+.input {
+	display: flex;
+	margin-bottom: 5px;
+	width: 230px;
+	display: flex;
+	justify-content: center;
+
+}
+
+body{
+	width: 100%;
+}
+header{
+	background: #008341 !important;
+}
+.navbar{
+	background: #008341 !important;
+	display: flex !important;
+    justify-content: center !important;
+}
+.navbar-brand img{
+	width: 120px;
+}
+footer{
+	background:#931919;
 }
