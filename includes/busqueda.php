@@ -412,7 +412,7 @@ if(empty($_GET))
          //cambiar los nombres de los campos de busqueda
          }
      }else{
-           $registros = '<h4 align="center"><p><strong>Hemos encontrado "' . $resultado->num_rows . '" coincidencias</strong></p></h4>';?>
+           $registros = '<h4 align="center"><p><strong  style="color:#931919;font-size:18px">Hemos encontrado "' . $resultado->num_rows . '" coincidencias</strong></p></h4>';?>
            <?php
            echo $registros;
          }
