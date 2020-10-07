@@ -351,3 +351,19 @@ header{
 footer{
 	background:#931919;
 }
+
+@media only screen and (max-width:722px) {
+	.container_main{
+		width: initial;
+		margin: initial;
+		display: initial;
+		height: initial;
+		box-shadow: initial;
+	}
+	.titulo {
+		text-align: center;
+	}
+	.column_one{
+		display:none;
+	}
+}

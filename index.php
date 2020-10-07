@@ -23,7 +23,6 @@
 		<div>
 			<div class="row">
 				<div align="center" class="col s12 m12 l12">
-					<h3>LISTADO DE GRADUADOS</h3>
 					<h6><strong><?php if (isset($_SESSION['perfiles_user'])) {
 									echo "Busqueda avanzada: Usuario: " . $_SESSION['perfiles_user'];
 								} ?></strong></h6>
