@@ -4,24 +4,24 @@
     <meta name="description" content="Zamorano es una Universidad internacional que ofrece a jóvenes de diversas latitudes y orígenes la oportunidad de convertirse en líderes profesionales.">
     <meta name="keywords" content="agricultura, la, mejor, mundo, university, universidad, agronomia, desarrollo, ambiente, agronegocios, alumni oportunies, faculty positions, feed ecoin, zamorano news, zamorano voices, Samuel Zemurray, eap, wilson, popenoe">
     <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0 maximun-scale=1.0">
-    <title>Perfiles de Graduados Posgrado | Universidad Zamorano</title>
+    <title>Graduados Posgrado | Universidad Zamorano</title>
     <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style-profile.css">
     <link rel="stylesheet" type="text/css" href="includes/styles/back-to-top/back-to-top.css">
     <meta name="description" content="Zamorano es una universidad internacional que ofrece a jóvenes de diversas latitudes y orígenes la oportunidad de convertirse en líderes profesionales.">
     <meta name="robots" content="noodp">
-    <link rel="canonical" href="http://www.zamorano.edu/graduates-list/">
+    <link rel="canonical" href="https://www.zamorano.edu/graduados-posgrado/">
     <meta property="og:locale" content="es_ES">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Perfiles de Graduados - Universidad Zamorano">
+    <meta property="og:title" content="Graduados Posgrado - Universidad Zamorano">
     <meta property="og:description" content="La Escuela Agrícola Panamericana Zamorano es una universidad internacional que ofrece a jóvenes de diversas latitudes y orígenes la oportunidad de convertirse en profesionales – líderes – con destrezas y valores, capaces de transformar empresas y organizaciones, que responden a los retos actuales de Latinoamérica y el mundo, retos como: la conservación de los recursos naturales, la transformación rural y el desarrollo de industrias agrícolas y agroindustriales internacionalmente competitivas.">
-    <meta property="og:url" content="http://www.zamorano.edu/graduates-list/">
-    <meta property="og:site_name" content="Perfiles de Graduados - Universidad Zamorano">
+    <meta property="og:url" content="https://www.zamorano.edu/graduados-posgrado/">
+    <meta property="og:site_name" content="Graduados Posgrado  - Universidad Zamorano">
     <meta property="og:image" content="https://www.zamorano.edu/wp-content/uploads/2016/02/Zamorano1.jpg">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="La Escuela Agrícola Panamericana Zamorano es una universidad internacional que ofrece a jóvenes de diversas latitudes y orígenes la oportunidad de convertirse en profesionales – líderes – con destrezas y valores, capaces de transformar empresas y organizaciones, que responden a los retos actuales de Latinoamérica y el mundo, retos como: la conservación de los recursos naturales, la transformación rural y el desarrollo de industrias agrícolas y agroindustriales internacionalmente competitivas.">
-    <meta name="twitter:title" content="Perfiles de Graduados - Universidad Zamorano">
+    <meta name="twitter:title" content="Graduados Posgrado  - Universidad Zamorano">
     <meta name="twitter:site" content="@EAPZamorano">
     <meta name="twitter:image" content="https://www.zamorano.edu/wp-content/uploads/2016/02/Zamorano1.jpg">
     <meta name="twitter:creator" content="@EAPZamorano">
