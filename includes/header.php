@@ -4,67 +4,11 @@
     <meta name="description" content="Zamorano es una Universidad internacional que ofrece a jóvenes de diversas latitudes y orígenes la oportunidad de convertirse en líderes profesionales.">
     <meta name="keywords" content="agricultura, la, mejor, mundo, university, universidad, agronomia, desarrollo, ambiente, agronegocios, alumni oportunies, faculty positions, feed ecoin, zamorano news, zamorano voices, Samuel Zemurray, eap, wilson, popenoe">
     <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0 maximun-scale=1.0">
-    <title>Perfiles de Graduados | Universidad Zamorano</title>
+    <title>Perfiles de Graduados Posgrado | Universidad Zamorano</title>
     <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="css/materialize/materialize.min.css"> -->
     <link rel="stylesheet" type="text/css" href="css/style-profile.css">
     <link rel="stylesheet" type="text/css" href="includes/styles/back-to-top/back-to-top.css">
-    <style type="text/css">
-        body {
-          display: flex;
-          min-height: 100vh;
-          flex-direction: column;
-        }
-
-        main {
-          flex: 1 0 auto;
-        }
-
-        footer.page-footer {
-          background-color: #931919;
-        }
-
-        nav {
-          background-color: #008341;
-        }
-        section {
-           float: left;
-           width: 63.197026%;
-        }
-        aside {
-           float: right;
-           width: 29.3680297%;
-        }
-
-        img.scale-with-grid, #Content img {
-             max-width: 100%;
-             height: auto;
-        }
-        .aligncenter img {
-             display: center;
-         }
-         .image_frame .image_wrapper img, {
-             transition: all .3s ease-in-out;
-         }
-         img {
-         margin: 0;
-             padding: 0;
-             border: 0;
-             font-size: 100%;
-             font: inherit;
-             vertical-align: baseline;
-         }
-
-    </style>
-    <!-- Footer -->
-   <!--  <link rel="stylesheet" id="mfn-base-css" href="css3/base.css?ver=16.7" type="text/css" media="all">
-    <link rel="stylesheet" id="mfn-layout-css" href="css3/layout.css?ver=16.7" type="text/css" media="all">
-    <link rel="stylesheet" id="mfn-shortcodes-css" href="css3/shortcodes.css?ver=16.7" type="text/css" media="all">
-    <link rel="stylesheet" id="mfn-animations-css" href="css3/animations.min.css?ver=16.7" type="text/css" media="all">
-    <link rel="stylesheet" id="mfn-jquery-ui-css" href="css3/jquery.ui.all.css?ver=16.7" type="text/css" media="all">
-    <link rel="stylesheet" id="mfn-responsive-css" href="css3/responsive.css?ver=16.7" type="text/css" media="all"> -->
-    <!-- This site is optimized with the Yoast SEO Premium plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
     <meta name="description" content="Zamorano es una universidad internacional que ofrece a jóvenes de diversas latitudes y orígenes la oportunidad de convertirse en líderes profesionales.">
     <meta name="robots" content="noodp">
     <link rel="canonical" href="http://www.zamorano.edu/graduates-list/">

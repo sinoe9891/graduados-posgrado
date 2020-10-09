@@ -13,6 +13,7 @@
 </style>
 
 <body>
+	<?php require_once('includes/header.php'); ?>
 	<nav class="navbar navbar-expand-lg">
 		<a class="navbar-brand" href="#">
 			<img src="https://www.zamorano.edu/wp-content/uploads/2018/10/zamorano_logo_blanco-02.png" alt="">
